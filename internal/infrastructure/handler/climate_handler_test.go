@@ -130,7 +130,7 @@ func TestClimateHandlerIntegration(t *testing.T) {
 				return []*mock.Call{z, w}
 			},
 			expectedStatus: http.StatusOK,
-			expectedBody:   `{"temp_C":17.1, "temp_F":62.8, "temp_K":17.1}`,
+			expectedBody:   `{"temp_C":16.4, "temp_F":61.519999999999996, "temp_K":289.4}`,
 		},
 	}
 

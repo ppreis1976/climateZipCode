@@ -107,7 +107,7 @@ func Test_climateUserCase_Get(t *testing.T) {
 				w := mockWeatherService.On("Get", mock.Anything, model.WeatherID("local")).Return(&weather, nil).Maybe()
 				return []*mock.Call{z, w}
 			},
-			expectedResult: model.Climate{TempC: 17.3, TempF: 63.1, TempK: 17.3},
+			expectedResult: model.Climate{TempC: 17.3, TempF: 63.14, TempK: 290.3},
 			expectError:    false,
 		},
 	}

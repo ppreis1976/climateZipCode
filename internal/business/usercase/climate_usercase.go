@@ -43,9 +43,9 @@ func (u climateUserCase) Get(zipCodeID model.ZipCodeID) (model.Climate, error) {
 
 	var climate model.Climate
 
-	climate.TempK = weather.Current.TempC
+	climate.TempK = weather.Current.TempC + 273
 	climate.TempC = weather.Current.TempC
-	climate.TempF = weather.Current.TempF
+	climate.TempF = weather.Current.TempC*1.8 + 32
 
 	return climate, nil
 }
